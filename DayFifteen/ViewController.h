@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <Social/Social.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
+- (IBAction)tappedSendEmail:(id)sender;
+- (IBAction)tappedSendSMS:(id)sender;
+- (IBAction)tappedOpenSafari:(id)sender;
+- (IBAction)tappedMakePhoneCall:(id)sender;
+- (IBAction)tappedSendTweet:(id)sender;
+- (IBAction)tappedSendFacebook:(id)sender;
 
 @end
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,77 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vek-p2-9bu">
+                                <rect key="frame" x="281" y="60" width="38" height="30"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSendEmail:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3RJ-Po-eSz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-gg-d6e">
+                                <rect key="frame" x="284" y="130" width="33" height="30"/>
+                                <state key="normal" title="SMS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSendSMS:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Udl-WO-R5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prn-09-VbY">
+                                <rect key="frame" x="263" y="270" width="75" height="30"/>
+                                <state key="normal" title="Phone Call">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedMakePhoneCall:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XyU-qL-jS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-MM-Pf1">
+                                <rect key="frame" x="277" y="340" width="46" height="30"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSendTweet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cmD-e8-UEq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6h-NA-acf">
+                                <rect key="frame" x="266" y="410" width="68" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSendFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mSN-zB-FBz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dM-dc-PfT">
+                                <rect key="frame" x="280" y="200" width="40" height="30"/>
+                                <state key="normal" title="Safari">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedOpenSafari:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1gK-gW-aVJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="b6h-NA-acf" secondAttribute="centerX" id="ACl-50-tup"/>
+                            <constraint firstItem="b6h-NA-acf" firstAttribute="top" secondItem="4ba-MM-Pf1" secondAttribute="bottom" constant="40" id="DWY-cK-3Ci"/>
+                            <constraint firstItem="4ba-MM-Pf1" firstAttribute="top" secondItem="Prn-09-VbY" secondAttribute="bottom" constant="40" id="EaX-SV-PYf"/>
+                            <constraint firstItem="tdd-gg-d6e" firstAttribute="top" secondItem="vek-p2-9bu" secondAttribute="bottom" constant="40" id="H3J-OB-92L"/>
+                            <constraint firstAttribute="centerX" secondItem="4ba-MM-Pf1" secondAttribute="centerX" id="K1K-wV-Lao"/>
+                            <constraint firstAttribute="centerX" secondItem="2dM-dc-PfT" secondAttribute="centerX" id="O2q-ra-kNH"/>
+                            <constraint firstItem="vek-p2-9bu" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="RQV-gj-TS8"/>
+                            <constraint firstItem="Prn-09-VbY" firstAttribute="top" secondItem="2dM-dc-PfT" secondAttribute="bottom" constant="40" id="XNc-ao-H1E"/>
+                            <constraint firstAttribute="centerX" secondItem="Prn-09-VbY" secondAttribute="centerX" id="Xic-30-AUG"/>
+                            <constraint firstItem="2dM-dc-PfT" firstAttribute="top" secondItem="tdd-gg-d6e" secondAttribute="bottom" constant="40" id="fI1-K4-LxE"/>
+                            <constraint firstAttribute="centerX" secondItem="tdd-gg-d6e" secondAttribute="centerX" id="qVZ-aL-XZ8"/>
+                            <constraint firstAttribute="centerX" secondItem="vek-p2-9bu" secondAttribute="centerX" id="x1m-dX-lCF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
